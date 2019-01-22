@@ -1,0 +1,37 @@
+{
+  "name": "relay-cra",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "babel-plugin-relay": "2.0.0-rc.2",
+    "graphql": "^14.1.1",
+    "react": "16.7.0",
+    "react-dom": "16.7.0",
+    "react-relay": "2.0.0-rc.2",
+    "react-scripts": "2.1.3",
+    "relay-compiler": "2.0.0-rc.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "compile-graphql": "relay-compiler --schema scripts/schema.graphql --src src",
+    "fetch-schema": "node scripts/fetch-schema.js",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "build-schema": "cd server && yarn build-schema",
+    "start-server": "cd server && yarn start",
+    "postinstall": "cd server && yarn"
+  },
+  "browserslist": {
+    "development": [
+      "last 2 chrome versions",
+      "last 2 firefox versions",
+      "last 2 edge versions"
+    ],
+    "production": [
+      ">0.25%",
+      "not op_mini all",
+      "ie 11"
+    ]
+  }
+}
